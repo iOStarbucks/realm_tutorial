@@ -45,5 +45,28 @@ class ViewController: UIViewController {
             mapManager.update(with: santa)
         }
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let santa = object as? Santa {
+            update(with: santa)
+        } else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+        }
+    }
+    
+    // Update UI according to santa's status
+    private func update(with santa: Santa) {
+        mapManager.update(with: santa)
+        let activity = santa.activity.description
+        let presentsRemaining = "\(santa.presentsRemaining)"
+        DispatchQueue.main.async {
+            self.activityLabel.text = activity
+            self.presentsRemainingLabel.text = presentsRemaining
+        }
+    }
+    
+    // ----- Use KVO -----
+    // TODO
+   
 }
 

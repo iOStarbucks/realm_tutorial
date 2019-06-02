@@ -18,6 +18,8 @@
 		7872C13322912BC7000F35DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7872C13222912BC7000F35DE /* Assets.xcassets */; };
 		7872C13622912BC7000F35DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7872C13422912BC7000F35DE /* LaunchScreen.storyboard */; };
 		7872C14122912BC7000F35DE /* SantaTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872C14022912BC7000F35DE /* SantaTrackerTests.swift */; };
+		78E27CB922A3B6930082ED03 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E27CB822A3B6930082ED03 /* Stop.swift */; };
+		78E27CBB22A3B8DE0082ED03 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E27CBA22A3B8DE0082ED03 /* Activity.swift */; };
 		FEB3BB3996A516D4EF6D7818 /* Pods_SantaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9EC8EE4E8B0739977C650B /* Pods_SantaTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		7872C13C22912BC7000F35DE /* SantaTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SantaTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7872C14022912BC7000F35DE /* SantaTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SantaTrackerTests.swift; sourceTree = "<group>"; };
 		7872C14222912BC7000F35DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78E27CB822A3B6930082ED03 /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		78E27CBA22A3B8DE0082ED03 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		811D8EC1715D28F3792BE5A7 /* Pods-SantaTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantaTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-SantaTrackerTests/Pods-SantaTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F9EC8EE4E8B0739977C650B /* Pods_SantaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +121,8 @@
 				78202D252291339600331941 /* Santa.swift */,
 				78202D27229133EE00331941 /* Location.swift */,
 				78202D29229142DD00331941 /* MapManager.swift */,
+				78E27CB822A3B6930082ED03 /* Stop.swift */,
+				78E27CBA22A3B8DE0082ED03 /* Activity.swift */,
 			);
 			path = SantaTracker;
 			sourceTree = "<group>";
@@ -318,9 +324,11 @@
 			files = (
 				7872C12E22912BC6000F35DE /* ViewController.swift in Sources */,
 				78202D2A229142DD00331941 /* MapManager.swift in Sources */,
+				78E27CBB22A3B8DE0082ED03 /* Activity.swift in Sources */,
 				7872C12C22912BC6000F35DE /* AppDelegate.swift in Sources */,
 				78202D28229133EE00331941 /* Location.swift in Sources */,
 				78202D262291339600331941 /* Santa.swift in Sources */,
+				78E27CB922A3B6930082ED03 /* Stop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
