@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byi-Rn-ggI">
+                                <rect key="frame" x="0.0" y="332" width="414" height="232"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ide-0d-Et9" customClass="CounterLabel" customModule="ClickCounter" customModuleProvider="target">
+                                        <rect key="frame" x="193.5" y="0.0" width="27" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="oGD-b7-aDF">
+                                        <rect key="frame" x="92" y="148" width="230" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIU-6r-cIr">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="84"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="👆"/>
+                                                <connections>
+                                                    <action selector="countUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4A-GX-rj1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qC-yo-T7X">
+                                                <rect key="frame" x="165" y="0.0" width="65" height="84"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                                <state key="normal" title="👇"/>
+                                                <connections>
+                                                    <action selector="countDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRC-bi-ZFs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oGD-b7-aDF" firstAttribute="top" secondItem="ide-0d-Et9" secondAttribute="bottom" constant="100" id="14B-Lc-Z6J"/>
+                                    <constraint firstItem="ide-0d-Et9" firstAttribute="centerX" secondItem="byi-Rn-ggI" secondAttribute="centerX" id="aHb-tD-ixF"/>
+                                    <constraint firstItem="ide-0d-Et9" firstAttribute="top" secondItem="byi-Rn-ggI" secondAttribute="top" id="bz7-y9-klg"/>
+                                    <constraint firstItem="oGD-b7-aDF" firstAttribute="centerX" secondItem="byi-Rn-ggI" secondAttribute="centerX" id="m4B-2B-2PI"/>
+                                    <constraint firstAttribute="bottom" secondItem="oGD-b7-aDF" secondAttribute="bottom" id="wY0-NY-7NL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="byi-Rn-ggI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf7-BG-VXU"/>
+                            <constraint firstItem="byi-Rn-ggI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vha-pf-VMT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="byi-Rn-ggI" secondAttribute="trailing" id="VoI-PN-UXw"/>
+                            <constraint firstItem="byi-Rn-ggI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rKd-gS-pTe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="ide-0d-Et9" id="5XG-dB-YGD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
