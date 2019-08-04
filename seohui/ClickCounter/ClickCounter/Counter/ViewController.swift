@@ -47,10 +47,3 @@ class ViewController: UIViewController, CountDelegate {
     }
     
 }
-
-extension UIStoryboard {
-    class func getViewController(from storyboardName: String, identifier: String) -> UIViewController {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: identifier)
-    }
-}
