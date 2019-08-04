@@ -27,6 +27,9 @@
                                         <state key="normal" title="👉 Back">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="back:" destination="p8l-yR-GI0" eventType="touchUpInside" id="wMi-8u-Z3D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
