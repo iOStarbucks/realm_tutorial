@@ -18,8 +18,15 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "countCell", for: indexPath) as! CountCell
-        let count = dummyCountArray[indexPath.row]
+        guard
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: "countCell",
+                for: indexPath
+                ) as? CountCell,
+            let count = dummyCountArray[safe: indexPath.row]
+            else {
+                return UITableViewCell()
+        }
         
         cell.load(with: count)
         

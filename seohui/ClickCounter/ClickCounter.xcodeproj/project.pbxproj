@@ -21,6 +21,7 @@
 		78CAE20422F6BE0A0002045F /* CountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE20322F6BE0A0002045F /* CountCell.swift */; };
 		78CAE20722F6C10E0002045F /* Date + Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE20622F6C10E0002045F /* Date + Timestamp.swift */; };
 		78CAE20922F6C7C60002045F /* ListVC + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE20822F6C7C60002045F /* ListVC + TableView.swift */; };
+		78CAE20B22F6C96F0002045F /* Array + Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CAE20A22F6C96F0002045F /* Array + Safe.swift */; };
 		B48B2F61A27D94CA78721B61 /* Pods_ClickCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C91B272D591B187C14D7FC0 /* Pods_ClickCounter.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		78CAE20322F6BE0A0002045F /* CountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountCell.swift; sourceTree = "<group>"; };
 		78CAE20622F6C10E0002045F /* Date + Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Timestamp.swift"; sourceTree = "<group>"; };
 		78CAE20822F6C7C60002045F /* ListVC + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListVC + TableView.swift"; sourceTree = "<group>"; };
+		78CAE20A22F6C96F0002045F /* Array + Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + Safe.swift"; sourceTree = "<group>"; };
 		8C94727B6A82DF11A348D711 /* Pods-ClickCounterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickCounterTests.release.xcconfig"; path = "Target Support Files/Pods-ClickCounterTests/Pods-ClickCounterTests.release.xcconfig"; sourceTree = "<group>"; };
 		B2995EB863D8D8848313EFC6 /* Pods_ClickCounterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClickCounterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60C282A62A176E7E8246744 /* Pods-ClickCounterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickCounterTests.debug.xcconfig"; path = "Target Support Files/Pods-ClickCounterTests/Pods-ClickCounterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				78CAE20622F6C10E0002045F /* Date + Timestamp.swift */,
+				78CAE20A22F6C96F0002045F /* Array + Safe.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				78CAE1FD22F6B18B0002045F /* ListVC.swift in Sources */,
 				78B4280D22EDB99900AEBE89 /* CounterLabel.swift in Sources */,
 				78B4280F22EDBBB200AEBE89 /* Count.swift in Sources */,
+				78CAE20B22F6C96F0002045F /* Array + Safe.swift in Sources */,
 				78B4281122EDC96D00AEBE89 /* CountDelegate.swift in Sources */,
 				78CAE20722F6C10E0002045F /* Date + Timestamp.swift in Sources */,
 				78CAE20422F6BE0A0002045F /* CountCell.swift in Sources */,
