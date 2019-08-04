@@ -21,8 +21,7 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countCell", for: indexPath) as! CountCell
         let count = dummyCountArray[indexPath.row]
         
-        cell.dateLabel.text = "\(Date(milliseconds: count.timestamp))"
-        cell.savedCountLabel.text = "\(count.count)"
+        cell.load(with: count)
         
         return cell
     }
