@@ -41,24 +41,24 @@
                                 <rect key="frame" x="0.0" y="114" width="414" height="748"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="xKy-jj-fyD">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countCell" rowHeight="60" id="xKy-jj-fyD" customClass="CountCell" customModule="ClickCounter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKy-jj-fyD" id="sUW-1c-QUa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-qe-K0s">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <rect key="frame" x="20" y="20" width="374" height="19.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFs-5Q-4Dv">
-                                                            <rect key="frame" x="0.0" y="11.5" width="42" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-sV-12O">
-                                                            <rect key="frame" x="332" y="11.5" width="42" height="20.5"/>
+                                                            <rect key="frame" x="332" y="0.0" width="42" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -67,12 +67,16 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Tpk-qe-K0s" secondAttribute="bottom" id="LUM-e6-Kr2"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tpk-qe-K0s" secondAttribute="bottom" constant="20" id="LUM-e6-Kr2"/>
                                                 <constraint firstAttribute="trailing" secondItem="Tpk-qe-K0s" secondAttribute="trailing" constant="20" id="RiF-AI-tX6"/>
-                                                <constraint firstItem="Tpk-qe-K0s" firstAttribute="top" secondItem="sUW-1c-QUa" secondAttribute="top" id="Rnb-Ty-fcP"/>
+                                                <constraint firstItem="Tpk-qe-K0s" firstAttribute="top" secondItem="sUW-1c-QUa" secondAttribute="top" constant="20" id="Rnb-Ty-fcP"/>
                                                 <constraint firstItem="Tpk-qe-K0s" firstAttribute="leading" secondItem="sUW-1c-QUa" secondAttribute="leading" constant="20" id="c45-tk-KT9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="vFs-5Q-4Dv" id="HgL-yU-z1T"/>
+                                            <outlet property="savedCountLabel" destination="EKL-sV-12O" id="DgA-Y1-T4D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -89,6 +93,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kso-Cw-k3h"/>
                     </view>
+                    <connections>
+                        <outlet property="countTable" destination="7N7-SD-5DN" id="OVV-sP-ghi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mT-J1-Uqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

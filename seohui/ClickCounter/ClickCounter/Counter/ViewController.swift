@@ -40,4 +40,16 @@ class ViewController: UIViewController, CountDelegate {
             realm.add(countObject, update: true)
         }
     }
+    
+    @IBAction func moveToList(_ sender: UIButton) {
+        let list = UIStoryboard.getViewController(from: "Main", identifier: "listViewController")
+        navigationController?.pushViewController(list, animated: true)
+    }
+}
+
+extension UIStoryboard {
+    class func getViewController(from storyboardName: String, identifier: String) -> UIViewController {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: identifier)
+    }
 }
