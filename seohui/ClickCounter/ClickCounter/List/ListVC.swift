@@ -7,15 +7,17 @@
 //
 
 import Foundation
+import RealmSwift
 import UIKit
 
 class ListViewController: UIViewController {
     @IBOutlet weak var countTable: UITableView!
     
-    let dummyCountArray = [
-        Count(count: 4),
-        Count(count: 40)
-    ]
+    private let realm = try! Realm()
+    
+    lazy var countArray: [Count] = {
+        return Array(realm.objects(Count.self).filter("saved = true").sorted(byKeyPath: "timestamp"))
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

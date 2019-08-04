@@ -14,7 +14,7 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyCountArray.count
+        return countArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -23,7 +23,7 @@ extension ListViewController: UITableViewDataSource {
                 withIdentifier: "countCell",
                 for: indexPath
                 ) as? CountCell,
-            let count = dummyCountArray[safe: indexPath.row]
+            let count = countArray[safe: indexPath.row]
             else {
                 return UITableViewCell()
         }

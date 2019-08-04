@@ -12,8 +12,10 @@ import RealmSwift
 class ViewController: UIViewController, CountDelegate {
     @IBOutlet weak var countLabel: CounterLabel!
     private let realm = try! Realm()
-    private lazy var countObject: Count = {
-        return realm.objects(Count.self).first ?? Count(count: 0)
+    
+    // connecting to counter label's count value
+    private lazy var restoredCount: Count = {
+        return realm.objects(Count.self).filter("saved = false").first ?? Count(count: 0)
     }()
     
     override func viewDidLoad() {
@@ -21,7 +23,7 @@ class ViewController: UIViewController, CountDelegate {
         
         countLabel.delegate = self
         
-        let count = countObject.count
+        let count = restoredCount.count
         
         countLabel.initialize(to: count)
     }
@@ -36,8 +38,8 @@ class ViewController: UIViewController, CountDelegate {
     
     func changed(count: Int) {
         try! realm.write {
-            countObject.count = count
-            realm.add(countObject, update: true)
+            restoredCount.count = count
+            realm.add(restoredCount, update: true)
         }
     }
     
@@ -46,4 +48,14 @@ class ViewController: UIViewController, CountDelegate {
         navigationController?.pushViewController(list, animated: true)
     }
     
+    @IBAction func saveCount(_ sender: UIButton) {
+        let count = Count(count: restoredCount.count)
+        
+        countLabel.reset()
+        
+        try! realm.write {
+            count.save()
+            realm.add(count, update: true)
+        }
+    }
 }

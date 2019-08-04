@@ -23,6 +23,10 @@ class CounterLabel: UILabel {
         self.count = count
     }
     
+    func reset() {
+        count = 0
+    }
+    
     func countUp() {
         count += 1
     }
