@@ -13,7 +13,7 @@ import UIKit
 class ListViewController: UIViewController {
     @IBOutlet weak var countTable: UITableView!
     
-    private let realm = try! Realm()
+    let realm = try! Realm()
     
     lazy var countArray: [Count] = {
         return Array(realm.objects(Count.self).filter("saved = true").sorted(byKeyPath: "timestamp"))
